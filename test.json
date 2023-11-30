@@ -1,0 +1,21 @@
+{
+  "creativeId": "53483",
+  "size": "500x500",
+  "DCO": "67c0eec5-bbf9-4abd-bbc3-0305628b6e03",
+  "campaignId": "15804",
+  "creativeName": "250x250_AAID",
+  "campaignName": "Angus (\u8acb\u8907\u88fd)91APP [p1\u6e2c\u8a66]AS \u65e5\u5e38\u767e\u642d\u65b0\u7d93\u5178LOGO\u5168\u771f\u76ae\u539a\u5e95\u4f11\u9592\u978b 9/29-10/10",
+  "audiencePack": [
+    {
+      "name": "Angus 40\u5929 addtocart FID(\u5361\u723a\u6e2c\u8a66\u7528_v1)",
+      "VCID": "v30fd0191",
+      "count": 380581,
+      "lookAlikePredict": { "1": { "count": 0, "cids": [] } }
+    }
+  ],
+  "priceTier": 0,
+  "price": 0,
+  "dailyBudget": "0",
+  "status": true,
+  "campaignStatus": "draft"
+}

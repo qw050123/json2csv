@@ -1,0 +1,11 @@
+html {
+  padding: 48px;
+  background-color: #efefef;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px;
+}

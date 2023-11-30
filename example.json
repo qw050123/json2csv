@@ -1,0 +1,59 @@
+[
+  {
+    "name": "小明",
+    "age": "18",
+    "class": [
+      {
+        "teacher": "大白",
+        "day": "2023-11-27"
+      }
+    ],
+    "gender": "male"
+  },
+  {
+    "name": "小華",
+    "age": "19",
+    "class": [
+      {
+        "teacher": "大白",
+        "day": "2023-11-27"
+      },
+      {
+        "teacher": "大狗",
+        "day": "2023-11-28"
+      }
+    ],
+    "gender": "female"
+  },
+  {
+    "name": "小瓜",
+    "age": "17",
+    "class": [],
+    "gender": "male"
+  }
+]
+[
+  {
+    "name": "小明",
+    "age": "18",
+    "teacher": "大白",
+    "day": "2023-11-27",
+    "gender": "male"
+  },
+  {
+    "name": "小華",
+    "age": "19",
+    "teacher": "大狗",
+    "day": "2023-11-28",
+    "gender": "female"
+  },
+  {
+    "name": "小瓜",
+    "age": "17",
+    "teacher": "大狗",
+    "day": "2023-11-28",
+    "gender": "male"
+  }
+]
+name;age;gender
+campaignId;campaignName;creativeId;creativeName;priceTier;price;dailyBudget;audiencePack:count,name
