@@ -557,7 +557,7 @@ const readSourceAndFilterToView = async () => {
                     if (isInclude) {
                       tempItem[headerItem] = item[headerItem];
                     } else {
-                      muliColumn = false;
+                      muliStatus = false;
                       filterStatus = false;
                       return false;
                     }
@@ -723,6 +723,7 @@ const readSourceAndFilterToView = async () => {
     let downloadTop = document.querySelector('.download-area button').offsetTop;
     window.scrollTo({ behavior: 'smooth', top: downloadTop - 20 });
   } catch (error) {
+    console.log(error);
     isSnackbarOpen.value = true;
     feebackType.value = 'error';
     feebackContent.value = '無法生成資料，請檢查資料與模板是否匹配！';
