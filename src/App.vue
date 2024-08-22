@@ -34,6 +34,7 @@
         spellcheck="false"
         hide-details
       ></v-textarea>
+      <div class="template-wrapper-eow" style="margin-top: 8px;font-size: 12px;">欄位間請用分號隔開，支援鑲套一層的屬性，請在父元素後面接上冒號，並且子元素用逗號隔開</div>
       <div class="template-wrapper-row text-right">
         <v-btn color="primary" @click="saveTemplate">儲存模板</v-btn>
       </div>
@@ -194,7 +195,7 @@ watch(templateSelect, val => {
   changeTemplate(val);
 });
 // 儲存模板
-let templateName = ref([]);
+let templateName = ref('');
 const saveTemplate = async () => {
   if (templateName.value.trim().length != 0) {
     try {
