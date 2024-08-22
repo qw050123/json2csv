@@ -34,6 +34,7 @@
         spellcheck="false"
         hide-details
       ></v-textarea>
+      <div class="template-wrapper-eow" style="margin-top: 8px;font-size: 12px;">欄位間請用分號隔開，支援鑲套一層的屬性，請在父元素後面接上冒號，並且子元素用逗號隔開</div>
       <div class="template-wrapper-row text-right">
         <v-btn color="primary" @click="saveTemplate">儲存模板</v-btn>
       </div>
@@ -194,7 +195,7 @@ watch(templateSelect, val => {
   changeTemplate(val);
 });
 // 儲存模板
-let templateName = ref([]);
+let templateName = ref('');
 const saveTemplate = async () => {
   if (templateName.value.trim().length != 0) {
     try {
@@ -557,7 +558,7 @@ const readSourceAndFilterToView = async () => {
                     if (isInclude) {
                       tempItem[headerItem] = item[headerItem];
                     } else {
-                      muliColumn = false;
+                      muliStatus = false;
                       filterStatus = false;
                       return false;
                     }
@@ -723,6 +724,7 @@ const readSourceAndFilterToView = async () => {
     let downloadTop = document.querySelector('.download-area button').offsetTop;
     window.scrollTo({ behavior: 'smooth', top: downloadTop - 20 });
   } catch (error) {
+    console.log(error);
     isSnackbarOpen.value = true;
     feebackType.value = 'error';
     feebackContent.value = '無法生成資料，請檢查資料與模板是否匹配！';
