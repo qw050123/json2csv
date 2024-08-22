@@ -1,0 +1,32 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 使用你的主要分支名稱
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run build  # 確保你的 package.json 中有 build 腳本
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages  # 檢出 gh-pages 分支
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g gh-pages
+      - run: gh-pages -d dist  # 指定構建輸出目錄
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
